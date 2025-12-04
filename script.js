@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===================================================================
   // CONFIGURATION ET RÉFÉRENCES AUX ÉLÉMENTS DU DOM
   // ===================================================================
-  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzhOUryLxPqkYJq_BptinTG3SNHnTcEcnfEi5q6DtpnkqBn4KN9MaY7ci6XE2PVSoiFww/exec';
+  const GOOGLE_SCRIPT_URL = 'AKfycbwfeDwiMN14QBaeu9p4iv78w9z5ZT6cnMA4YDqGPYldvSRhE3kssWEJxwbiuRVzlQppfQ';
 
   const form = document.getElementById('regForm');
   if (!form) return; // Si le formulaire n'est pas sur la page, on ne fait rien
@@ -120,4 +120,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }[s]));
   }
 });
+
 
