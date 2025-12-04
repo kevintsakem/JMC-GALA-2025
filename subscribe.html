@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation - Gala de Charité</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">GALA EN CHRIST</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À Propos</a></li>
+                    <li><a href="subscribe.html" class="active">Réserver</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <form id="regForm">
+            <h2>Réservez Votre Place</h2>
+            <div class="form-group"><label for="fullName">Nom et Prénom</label><input type="text" id="fullName" name="full_name" required></div>
+            <div class="form-group"><label for="gender">Sexe</label><select id="gender" name="gender" required><option value="">Sélectionnez...</option><option value="Homme">Homme</option><option value="Femme">Femme</option></select></div>
+            <div class="form-group"><label for="phone">Téléphone</label><input type="tel" id="phone" name="phone" required></div>
+            <div class="form-group"><label for="church">Église</label><input type="text" id="church" name="church" required></div>
+            <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
+            <button type="submit" class="btn">Réserver ma Place</button>
+        </form>
+
+        <div id="confirmation" style="display: none;">
+            <div class="loading-spinner"></div>
+            <p id="confText">Traitement en cours...</p>
+            <div id="ticket" style="font-family: 'Montserrat', sans-serif;">
+                <h3>GALA EN CHRIST</h3>
+                <p class="subtitle">Élégance, Noblesse & Vie en Christ</p>
+                <canvas id="qrcodeCanvas"></canvas>
+                <div id="ticketDetails"></div>
+            </div>
+            <button id="downloadTicketBtn" class="btn" style="margin-top:20px;">Télécharger mon Ticket</button>
+        </div>
+    </main>
+
+    <footer class="main-footer"><p>&copy; 2025 Gala en Christ. Tous droits réservés.</p></footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
