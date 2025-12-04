@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- IMPORTANT : COLLEZ VOTRE NOUVELLE URL DE SCRIPT ICI ---
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbysiggMTHeWuo2QBSeoR7PXew0gGonlfRB_kc9syx5VQ6zXN5SNuBjMcKbT9qpFY1oelQ/exec';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx0gtmAR_A_5kbK-PiLsHnMyS5zdstwScHCq33A06PqSs1KXaaX_m-dXMmNCSlxSbNm2Q/exec';
 
     const form = document.getElementById('regForm');
     if (!form) return;
@@ -82,4 +82,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }[s]));
     }
 });
+
 
