@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ===================================================================
     // CONFIGURATION ET ÉLÉMENTS DU DOM
     // ===================================================================
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz-fws9cnFL6wf-9Ub7ZqA9BPZ_p6xTGtbvz4Swlhx_SYDyY8f9BW4P-nmzoOPtF1AU_A/exec';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwsSIEKIJd6vdk7DUjo25TzFcjG_a7YNnJgtLWH-uFDisto8_X5RC_vyWk_px2w-PSdww/exec';
     const ADMIN_USER = 'admin_gala';
     const ADMIN_PASS = 'P@sswordGala2025!';
 
