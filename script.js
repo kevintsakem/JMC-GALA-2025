@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   // --- IMPORTANT ---
   // Collez ici l'URL de votre application web Google Apps Script que vous avez copiée
-  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzt7XFdLdbYePK0WkeNezAlbkZgi2pmCK2G46tgxGCJeP1OGqwpmxC8YYeI5mOh2UcNkA/exec';
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzcnNEXvnH-zbVbBTrVPIrKHztmeyt6qyN0kp_4CKIMas4EJiXh0gGUJONy-EIPQIZXQA/exec';
   const form = document.getElementById('regForm');
   const confBox = document.getElementById('confirmation');
   const confText = document.getElementById('confText');
@@ -120,4 +120,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }[s]));
   }
 });
+
 
