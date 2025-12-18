@@ -3,47 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gala de Jeunesse</title>
+    <title>Gala de Charité - Accueil</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Dépendances pour le scan et la génération de tickets -->
-    <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
-
     <header class="main-header">
-        <div class="logo">
-            <a href="index.html">GALA DE JEUNESSE</a>
-        </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="about.html">À Propos</a></li>
-                <li><a href="subscribe.html" class="btn btn-primary">Réserver</a></li>
-            </ul>
-        </nav>
-        <div class="admin-access">
-            <button id="admin-login-btn">Admin</button>
+        <div class="container">
+            <a href="index.html" class="logo">GALA EN CHRIST</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="about.html">À Propos</a></li>
+                    <li><a href="subscribe.html">Réserver</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Élégance, Noblesse & Vie en Christ</h1>
-                <p>Rejoignez-nous pour une soirée inoubliable.</p>
-                <p class="event-date">19 Décembre 2024 — 16:00</p>
-                <a href="subscribe.html" class="btn btn-secondary">Je réserve ma place</a>
-            </div>
+    <main class="container">
+        <section class="showcase">
+            <h1>Élégance, Noblesse & <span>Vie en Christ</span></h1>
+            <p>Rejoignez-nous pour une soirée inoubliable de célébration, de partage et de communion.</p>
+            <a href="subscribe.html" class="btn">Réserver ma Place</a>
         </section>
     </main>
 
     <footer class="main-footer">
-        <p>&copy; 2024 Gala de Jeunesse. Tous droits réservés.</p>
+        <p>&copy; 2025 Gala en Christ. Tous droits réservés. | <a href="#" id="admin-link">Admin</a></p>
     </footer>
 
-    <!-- ========== FENÊTRE DE CONNEXION ADMIN (cachée) ========== -->
+    <!-- ========== MODALE DE CONNEXION ADMIN (cachée) ========== -->
     <div id="admin-login-modal" class="admin-modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
@@ -73,39 +62,14 @@
                 <button class="tab-btn" data-tab="scanner">Scanner les Tickets</button>
             </nav>
 
-            <!-- Onglet 1: Validation et Génération -->
+            <!-- Onglet 1: Validation -->
             <div id="validation-tab" class="tab-content active">
-                <h3>Participants non payés</h3>
                 <button id="refreshBtn" class="btn">Rafraîchir la liste</button>
                 <div id="unpaid-list"><p>Chargement...</p></div>
-                
-                <!-- NOUVELLE FONCTIONNALITÉ: FORMULAIRE DE GÉNÉRATION DE TICKET -->
-                <hr style="margin: 2rem 0;">
-                <div id="qr-generator">
-                    <h3>Générer un Ticket / QR Code</h3>
-                    <p>Entrez l'ID et le nom complet d'un participant pour afficher son ticket.</p>
-                    
-                    <form id="qr-generator-form">
-                        <div class="form-group">
-                            <label for="id-lookup">ID du Participant</label>
-                            <input type="text" id="id-lookup" placeholder="Ex: GALA-0042" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="name-lookup">Nom du Participant</label>
-                            <input type="text" id="name-lookup" placeholder="Ex: Jean Dupont" required>
-                        </div>
-                        <button type="submit" class="btn">Générer le Ticket</button>
-                    </form>
-                    
-                    <div id="generated-ticket-container" style="margin-top: 1.5rem;"></div>
-                </div>
-                <!-- FIN DE LA NOUVELLE FONCTIONNALITÉ -->
-
             </div>
 
             <!-- Onglet 2: Scanner -->
             <div id="scanner-tab" class="tab-content">
-                <h3>Scanner les tickets</h3>
                 <div id="scanner-controls">
                     <button id="start-scan-btn" class="btn">Démarrer le Scanner</button>
                     <button id="stop-scan-btn" class="btn" style="display:none; background-color: #dc3545;">Arrêter le Scanner</button>
@@ -115,7 +79,7 @@
             </div>
         </div>
     </div>
-
+    
     <!-- Overlay de résultat pour le scanner -->
     <div id="result-overlay">
         <h2 id="result-status"></h2>
@@ -123,7 +87,8 @@
         <p id="result-message"></p>
     </div>
 
+    <!-- Bibliothèques JS requises -->
+    <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
     <script src="admin_panel.js"></script>
-
 </body>
 </html>
