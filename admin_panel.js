@@ -182,7 +182,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function showResult(type, statusText, messageText, nameText = '') {
         resultOverlay.className = type;
         document.getElementById('result-status').textContent = statusText;
-        document.getElementById('result-name').textContent = nameText;
         document.getElementById('result-message').textContent = messageText;
         resultOverlay.style.display = 'flex';
     }
