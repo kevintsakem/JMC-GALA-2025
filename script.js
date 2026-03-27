@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // --- IMPORTANT ---
-  // Collez ici l'URL de votre application web Google Apps Script que vous avez copiée
+   
   const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw2P4kTQ_LVCi5cNg6TqNFIuKN0jhtejZBhY4p4fzDeLRXqgexiEhGkQ9s3M3tly5z9Kw/exec';
   const form = document.getElementById('regForm');
   const confBox = document.getElementById('confirmation');
