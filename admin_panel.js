@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ===================================================================
-    // CONFIGURATION ET ÉLÉMENTS DU DOM
-    // ===================================================================
+    
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw2P4kTQ_LVCi5cNg6TqNFIuKN0jhtejZBhY4p4fzDeLRXqgexiEhGkQ9s3M3tly5z9Kw/exec';
     const ADMIN_USER = 'admin_gala';
     const ADMIN_PASS = 'P@sswordGala2025!';
@@ -29,9 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let html5QrCode;
     let isScanning = true; // Initialisé à true pour le premier scan
 
-    // ===================================================================
-    // GESTION DES MODALES ET DE LA CONNEXION
-    // ===================================================================
+    
     adminLink.addEventListener('click', (e) => { e.preventDefault(); loginModal.style.display = 'block'; });
 
     const closeModal = () => {
@@ -61,9 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ===================================================================
-    // GESTION DES ONGLETS
-    // ===================================================================
+    
     tabBtns.forEach(btn => btn.addEventListener('click', () => {
         tabBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
@@ -72,9 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById(`${tabName}-tab`).classList.add('active');
     }));
 
-    // ===================================================================
-    // SECTION 1 : LOGIQUE DE VALIDATION DES PAIEMENTS
-    // ===================================================================
+    
     refreshBtn.addEventListener('click', fetchUnpaidUsers);
 
     async function fetchUnpaidUsers() {
@@ -120,9 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // ===================================================================
-    // SECTION 2 : LOGIQUE DU SCANNER
-    // ===================================================================
+    
     html5QrCode = new Html5Qrcode("scanner-view");
 
     startScanBtn.addEventListener('click', () => {
@@ -186,4 +176,4 @@ document.addEventListener('DOMContentLoaded', () => {
         resultOverlay.style.display = 'flex';
     }
 
-}); // FIN DU `DOMContentLoaded`
+});
